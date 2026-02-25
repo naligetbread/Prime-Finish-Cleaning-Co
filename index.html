@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PrimeFinish Cleaning Co. | Precision Cleaning. Prime Results.</title>
+  <meta name="description" content="PrimeFinish Cleaning Co. offers residential, commercial, and post-construction cleaning. Request a quote online. Precision Cleaning. Prime Results." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PrimeFinish Cleaning Co." />
+  <meta property="og:description" content="Residential • Commercial • Post-Construction. Request a quote online." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --panel:#101826;
+      --panel2:#0f1520;
+      --text:#e9eef7;
+      --muted:#b8c2d6;
+      --gold:#d5b15a;
+      --gold2:#f1d07a;
+      --line:rgba(255,255,255,.10);
+      --shadow: 0 20px 60px rgba(0,0,0,.55);
+      --radius:18px;
+      --max:1100px;
+      --ok:#3ee28b;
+      --warn:#ffcf5a;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 15% -10%, rgba(213,177,90,.24), transparent 50%),
+        radial-gradient(900px 500px at 90% 0%, rgba(241,208,122,.14), transparent 55%),
+        radial-gradient(900px 600px at 50% 110%, rgba(70,130,180,.10), transparent 60%),
+        linear-gradient(180deg, #070a0f, var(--bg));
+      line-height:1.45;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 70px;}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px;
+      padding:14px 16px;
+      background:rgba(16,24,38,.55);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+      backdrop-filter: blur(10px);
+      position:sticky; top:12px; z-index:10;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px; min-width:220px;
+    }
+    .brand img{
+      width:44px; height:44px; object-fit:contain;
+      filter: drop-shadow(0 10px 16px rgba(0,0,0,.45));
+    }
+    .brand .name{font-weight:800; letter-spacing:.4px}
+    .brand .tag{color:var(--muted); font-size:12px; margin-top:2px}
+    .links{display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .links a{
+      text-decoration:none;
+      padding:10px 12px;
+      border:1px solid transparent;
+      border-radius:14px;
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+    }
+    .links a:hover{
+      border-color:var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid rgba(213,177,90,.35);
+      background: linear-gradient(180deg, rgba(213,177,90,.20), rgba(213,177,90,.06));
+      color:var(--text);
+      font-weight:800;
+      text-decoration:none;
+      box-shadow: 0 14px 30px rgba(0,0,0,.35);
+      cursor:pointer;
+    }
+    .btn:hover{border-color:rgba(241,208,122,.55)}
+    .btn.secondary{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      font-weight:700;
+    }
+
+    .hero{
+      display:grid; grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      margin-top:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr}
+      .brand{min-width:auto}
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(16,24,38,.72), rgba(15,21,32,.62));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      padding:22px;
+    }
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(213,177,90,.25);
+      background:rgba(213,177,90,.08);
+      color:var(--gold2);
+      font-weight:800;
+      font-size:12px;
+      letter-spacing:.6px;
+      text-transform:uppercase;
+    }
+    h1{margin:14px 0 10px; font-size:44px; line-height:1.05}
+    @media (max-width: 520px){h1{font-size:36px}}
+    p.lead{margin:0; color:var(--muted); font-size:16px}
+    .heroActions{display:flex; gap:12px; margin-top:18px; flex-wrap:wrap}
+    .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+    .pill{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      border-radius:999px;
+      padding:9px 10px;
+      color:var(--muted);
+      font-weight:700;
+      font-size:13px;
+    }
+    .grid3{
+      display:grid; grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+    @media (max-width: 900px){.grid3{grid-template-columns:1fr}}
+    .svc{
+      padding:16px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+    }
+    .svc h3{margin:8px 0 6px; font-size:16px}
+    .svc p{margin:0; color:var(--muted); font-size:14px}
+    .svc .mini{margin-top:10px; color:rgba(241,208,122,.95); font-weight:800; font-size:13px}
+    .section{margin-top:18px}
+    .section h2{margin:0 0 10px; font-size:24px}
+    .split{
+      display:grid; grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width: 900px){.split{grid-template-columns:1fr}}
+    label{display:block; font-weight:800; font-size:13px; margin:12px 0 6px}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.25);
+      color:var(--text);
+      outline:none;
+    }
+    input::placeholder, textarea::placeholder{color:rgba(184,194,214,.7)}
+    textarea{min-height:110px; resize:vertical}
+    .note{color:var(--muted); font-size:13px; margin-top:8px}
+    .bar{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:14px;
+      align-items:center;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      border-radius:999px;
+      padding:9px 10px;
+      color:var(--muted);
+      font-weight:700;
+      font-size:13px;
+    }
+    .summary{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px;
+      background:rgba(0,0,0,.20);
+      margin-top:12px;
+      white-space:pre-wrap;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size:12.5px;
+      color:rgba(233,238,247,.92);
+    }
+    .footer{
+      margin-top:18px;
+      display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px;
+      padding:16px;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:rgba(16,24,38,.45);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .timeline{
+      margin-top:10px;
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid rgba(213,177,90,.18);
+      background:rgba(213,177,90,.06);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .tiny{font-size:12px; color:rgba(184,194,214,.85)}
+    .hr{height:1px; background:var(--line); margin:14px 0;}
+    .hide{display:none}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- NAV -->
+    <div class="nav">
+      <div class="brand">
+        <img src="assets/pfcc-logo.png" alt="PrimeFinish Cleaning Co. logo" />
+        <div>
+          <div class="name">PrimeFinish Cleaning Co.</div>
+          <div class="tag">Precision Cleaning. Prime Results.</div>
+        </div>
+      </div>
+      <div class="links">
+        <a href="#services">Services</a>
+        <a href="#quote">Request a Quote</a>
+        <a href="#about">Our Story</a>
+        <a class="btn" href="#quote">Get an Offer</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="card">
+        <div class="kicker">Residential • Commercial • Post-Construction</div>
+        <h1>Clean you can feel.<br/>Results you can trust.</h1>
+        <p class="lead">
+          Choose the service you need, send the details, and we’ll reply with a clear offer.
+          Need something outside cleaning? Request it — if we can provide it, we’ll quote it (and can subcontract when needed).
+        </p>
+
+        <div class="heroActions">
+          <a class="btn" href="#quote">Request a Quote</a>
+          <a class="btn secondary" href="#services">View Services</a>
+        </div>
+
+        <div class="pillrow">
+          <div class="pill">Fast response</div>
+          <div class="pill">As-is / Deep clean options</div>
+          <div class="pill">Move-in / Move-out</div>
+          <div class="pill">Turnovers & make-ready</div>
+        </div>
+
+        <div class="timeline">
+          <strong style="color:var(--gold2)">Honoring our roots:</strong>
+          Merciful Maids (est. 2019) → PrimeFinish Cleaning Co. (2026)
+          <div class="tiny" style="margin-top:6px;">
+            Same commitment. Elevated standard. Prime finish every time.
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="services">
+        <h2 style="margin:0 0 8px;">What we handle</h2>
+        <div class="grid3">
+          <div class="svc">
+            <div class="mini">Residential</div>
+            <h3>Homes & Apartments</h3>
+            <p>Standard, deep clean, move-in/out, recurring, add-ons.</p>
+          </div>
+          <div class="svc">
+            <div class="mini">Commercial</div>
+            <h3>Offices & Small Businesses</h3>
+            <p>Weekly/bi-weekly service, bathrooms, floors, trash, touchpoints.</p>
+          </div>
+          <div class="svc">
+            <div class="mini">Post-Construction</div>
+            <h3>Builds & Renovations</h3>
+            <p>Dust removal, detailed wipe-downs, windows, floors, final-ready.</p>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="badge">✅ Licensed/insured: <span class="tiny">Add when ready</span></div>
+        <div class="badge">📍 Service area: <span class="tiny">Add your cities/zip codes</span></div>
+
+        <div class="note" style="margin-top:12px;">
+          *We’ll review your request and send an offer based on size, condition, and timeline.
+        </div>
+      </div>
+    </div>
+
+    <!-- QUOTE -->
+    <div class="card section" id="quote">
+      <h2>Request a Quote (Get an Offer)</h2>
+      <p class="lead" style="font-size:15px;">
+        Fill this out and hit “Generate Quote Request”. It will prepare a clean summary and open your email to send it.
+        (You can replace the placeholder email/phone later.)
+      </p>
+
+      <form id="quoteForm">
+        <div class="split">
+          <div>
+            <label for="fullName">Full Name</label>
+            <input id="fullName" name="fullName" placeholder="Your name" required />
+
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" placeholder="(555) 123-4567" />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" placeholder="you@example.com" />
+
+            <label for="serviceType">Service Type</label>
+            <select id="serviceType" name="serviceType" required>
+              <option value="" selected disabled>Select a service</option>
+              <option value="Residential Cleaning">Residential Cleaning</option>
+              <option value="Commercial Cleaning">Commercial Cleaning</option>
+              <option value="Post-Construction Cleaning">Post-Construction Cleaning</option>
+              <option value="Other Service Request (Outside Cleaning)">Other Service Request (Outside Cleaning)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="address">Service Address</label>
+            <input id="address" name="address" placeholder="Street address" />
+
+            <div class="split" style="gap:10px;">
+              <div>
+                <label for="city">City</label>
+                <input id="city" name="city" placeholder="City" />
+              </div>
+              <div>
+                <label for="state">State</label>
+                <input id="state" name="state" placeholder="NC" />
+              </div>
+            </div>
+
+            <div class="split" style="gap:10px;">
+              <div>
+                <label for="sqft">Approx. Sq Ft</label>
+                <input id="sqft" name="sqft" placeholder="e.g., 1500" inputmode="numeric" />
+              </div>
+              <div>
+                <label for="timeline">Timeline</label>
+                <select id="timeline" name="timeline">
+                  <option value="" selected disabled>Select</option>
+                  <option>ASAP</option>
+                  <option>Within 48 hours</option>
+                  <option>This week</option>
+                  <option>Next 1–2 weeks</option>
+                  <option>Flexible</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Residential/Commercial fields -->
+            <div id="cleaningFields">
+              <div class="split" style="gap:10px;">
+                <div>
+                  <label for="beds">Beds</label>
+                  <input id="beds" name="beds" placeholder="e.g., 3" inputmode="numeric" />
+                </div>
+                <div>
+                  <label for="baths">Baths</label>
+                  <input id="baths" name="baths" placeholder="e.g., 2" inputmode="numeric" />
+                </div>
+              </div>
+
+              <label for="cleanType">Cleaning Level</label>
+              <select id="cleanType" name="cleanType">
+                <option value="" selected disabled>Select</option>
+                <option>Standard Clean</option>
+                <option>Deep Clean</option>
+                <option>Move-In / Move-Out</option>
+                <option>Recurring (Weekly/Biweekly/Monthly)</option>
+              </select>
+
+              <label for="addOns">Add-ons (optional)</label>
+              <input id="addOns" name="addOns" placeholder="e.g., inside oven, inside fridge, windows, baseboards" />
+            </div>
+
+            <!-- Post-construction fields -->
+            <div id="postFields" class="hide">
+              <label for="projectType">Project Type</label>
+              <select id="projectType" name="projectType">
+                <option value="" selected disabled>Select</option>
+                <option>New build</option>
+                <option>Renovation</option>
+                <option>Remodel / partial update</option>
+                <option>Commercial build-out</option>
+              </select>
+
+              <label for="jobStage">Job Stage</label>
+              <select id="jobStage" name="jobStage">
+                <option value="" selected disabled>Select</option>
+                <option>Rough clean</option>
+                <option>Final clean</option>
+                <option>Touch-up clean</option>
+              </select>
+
+              <label for="siteNotes">Site Notes (dust, debris, paint, etc.)</label>
+              <input id="siteNotes" name="siteNotes" placeholder="Any important details" />
+            </div>
+
+            <!-- Other service fields -->
+            <div id="otherFields" class="hide">
+              <label for="otherService">Describe the service you’re requesting</label>
+              <input id="otherService" name="otherService" placeholder="e.g., hauling, light repairs, lawn care, etc." />
+
+              <label for="subcontractOk">OK if subcontracted?</label>
+              <select id="subcontractOk" name="subcontractOk">
+                <option value="" selected disabled>Select</option>
+                <option>Yes, subcontract is fine</option>
+                <option>Prefer PrimeFinish team only</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+
+        <label for="notes">Condition Notes / Special Requests</label>
+        <textarea id="notes" name="notes" placeholder="Tell us what matters: pets, heavy buildup, vacant, utilities on/off, access instructions, must-areas, etc."></textarea>
+
+        <div class="bar">
+          <button class="btn" type="button" id="generateBtn">Generate Quote Request</button>
+          <button class="btn secondary" type="reset">Clear</button>
+          <span class="badge">Response Method: <strong style="color:var(--ok)">Email reply with offer</strong></span>
+        </div>
+
+        <div class="note">
+          Placeholder contact info used right now:
+          <strong>hello@primefinishcleaningco.com</strong> • <strong>(555) 019-2026</strong>
+          — you can change it later in the “Contact” section below.
+        </div>
+
+        <div class="summary" id="summaryBox" aria-live="polite">Your quote request summary will appear here.</div>
+
+        <div class="bar" style="margin-top:12px;">
+          <a class="btn secondary" id="sendEmailBtn" href="#" style="pointer-events:none; opacity:.55;">Send Request (Email)</a>
+          <span class="tiny">Tip: This opens your default mail app with the request pre-filled.</span>
+        </div>
+      </form>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="card section" id="about">
+      <h2>Our Story</h2>
+      <p class="lead">
+        PrimeFinish Cleaning Co. was built on a foundation of service and consistency.
+        We honor <strong>Merciful Maids (est. 2019)</strong> — and bring that same standard forward as <strong>PrimeFinish Cleaning Co. (2026)</strong>.
+      </p>
+
+      <div class="grid3" style="margin-top:14px;">
+        <div class="svc">
+          <div class="mini">2019</div>
+          <h3>Merciful Maids</h3>
+          <p>Started with care, integrity, and quality work that speaks for itself.</p>
+        </div>
+        <div class="svc">
+          <div class="mini">2026</div>
+          <h3>PrimeFinish Cleaning Co.</h3>
+          <p>Same mission — upgraded branding, systems, and service range.</p>
+        </div>
+        <div class="svc">
+          <div class="mini">Today</div>
+          <h3>Offer-based quoting</h3>
+          <p>You request. We review. We send a clear offer based on scope + timeline.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer" id="contact">
+      <div>
+        <strong>PrimeFinish Cleaning Co.</strong><br/>
+        <span class="tiny">Precision Cleaning. Prime Results.</span>
+      </div>
+      <div>
+        <strong>Contact</strong><br/>
+        <span class="tiny">Phone: (555) 019-2026 • Email: hello@primefinishcleaningco.com</span>
+      </div>
+      <div>
+        <strong>Hours</strong><br/>
+        <span class="tiny">Mon–Sat: 9:00 AM – 6:00 PM</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // ====== PLACEHOLDER COMPANY CONTACT (change later) ======
+    const COMPANY_EMAIL = "hello@primefinishcleaningco.com";
+    const COMPANY_PHONE = "(555) 019-2026";
+
+    // ====== Elements ======
+    const serviceType = document.getElementById("serviceType");
+    const cleaningFields = document.getElementById("cleaningFields");
+    const postFields = document.getElementById("postFields");
+    const otherFields = document.getElementById("otherFields");
+
+    const summaryBox = document.getElementById("summaryBox");
+    const sendEmailBtn = document.getElementById("sendEmailBtn");
+    const generateBtn = document.getElementById("generateBtn");
+
+    function showFields() {
+      const v = serviceType.value;
+
+      // Default show cleaning fields for residential/commercial
+      cleaningFields.classList.remove("hide");
+      postFields.classList.add("hide");
+      otherFields.classList.add("hide");
+
+      if (v === "Post-Construction Cleaning") {
+        postFields.classList.remove("hide");
+      }
+      if (v === "Other Service Request (Outside Cleaning)") {
+        cleaningFields.classList.add("hide");
+        otherFields.classList.remove("hide");
+      }
+      if (v === "Residential Cleaning" || v === "Commercial Cleaning") {
+        // cleaning fields already visible
+      }
+    }
+
+    serviceType.addEventListener("change", showFields);
+
+    function val(id){ return (document.getElementById(id).value || "").trim(); }
+
+    function buildSummary(){
+      const now = new Date().toLocaleString();
+
+      const data = {
+        timestamp: now,
+        name: val("fullName"),
+        phone: val("phone"),
+        email: val("email"),
+        serviceType: val("serviceType"),
+        address: val("address"),
+        city: val("city"),
+        state: val("state"),
+        sqft: val("sqft"),
+        timeline: val("timeline"),
+
+        beds: val("beds"),
+        baths: val("baths"),
+        cleanType: val("cleanType"),
+        addOns: val("addOns"),
+
+        projectType: val("projectType"),
+        jobStage: val("jobStage"),
+        siteNotes: val("siteNotes"),
+
+        otherService: val("otherService"),
+        subcontractOk: val("subcontractOk"),
+
+        notes: val("notes")
+      };
+
+      // Basic validation: name + service type
+      if (!data.name || !data.serviceType) {
+        return { ok:false, text:"Please enter your name and select a service type." };
+      }
+
+      let lines = [];
+      lines.push("PRIMEFINISH CLEANING CO. — QUOTE REQUEST");
+      lines.push("Precision Cleaning. Prime Results.");
+      lines.push("");
+      lines.push(`Submitted: ${data.timestamp}`);
+      lines.push("");
+      lines.push("CLIENT");
+      lines.push(`Name: ${data.name}`);
+      if (data.phone) lines.push(`Phone: ${data.phone}`);
+      if (data.email) lines.push(`Email: ${data.email}`);
+      lines.push("");
+      lines.push("SERVICE");
+      lines.push(`Type: ${data.serviceType}`);
+      if (data.timeline) lines.push(`Timeline: ${data.timeline}`);
+      if (data.sqft) lines.push(`Approx Sq Ft: ${data.sqft}`);
+      lines.push("");
+      lines.push("LOCATION");
+      if (data.address) lines.push(`Address: ${data.address}`);
+      if (data.city || data.state) lines.push(`City/State: ${data.city || ""}${data.city && data.state ? ", " : ""}${data.state || ""}`);
+
+      // Service-specific sections
+      if (data.serviceType === "Residential Cleaning" || data.serviceType === "Commercial Cleaning") {
+        lines.push("");
+        lines.push("CLEANING DETAILS");
+        if (data.beds) lines.push(`Beds: ${data.beds}`);
+        if (data.baths) lines.push(`Baths: ${data.baths}`);
+        if (data.cleanType) lines.push(`Cleaning Level: ${data.cleanType}`);
+        if (data.addOns) lines.push(`Add-ons: ${data.addOns}`);
+      }
+
+      if (data.serviceType === "Post-Construction Cleaning") {
+        lines.push("");
+        lines.push("POST-CONSTRUCTION DETAILS");
+        if (data.projectType) lines.push(`Project Type: ${data.projectType}`);
+        if (data.jobStage) lines.push(`Job Stage: ${data.jobStage}`);
+        if (data.siteNotes) lines.push(`Site Notes: ${data.siteNotes}`);
+      }
+
+      if (data.serviceType === "Other Service Request (Outside Cleaning)") {
+        lines.push("");
+        lines.push("OTHER SERVICE REQUEST");
+        if (data.otherService) lines.push(`Requested Service: ${data.otherService}`);
+        if (data.subcontractOk) lines.push(`Subcontract OK?: ${data.subcontractOk}`);
+        lines.push("Note: If PrimeFinish can provide this service, an offer will be sent. Some services may be subcontracted.");
+      }
+
+      if (data.notes) {
+        lines.push("");
+        lines.push("CONDITION NOTES / SPECIAL REQUESTS");
+        lines.push(data.notes);
+      }
+
+      lines.push("");
+      lines.push("—");
+      lines.push(`Send offer reply to: ${data.email || "(client did not provide email)"}`);
+      lines.push(`Client phone: ${data.phone || "(not provided)"}`);
+      lines.push("");
+      lines.push("Internal: Merciful Maids (2019) → PrimeFinish Cleaning Co. (2026)");
+
+      return { ok:true, text: lines.join("\n"), data };
+    }
+
+    function makeMailto(summary, clientName){
+      const subject = `Quote Request — ${clientName} — PrimeFinish Cleaning Co.`;
+      const body = summary;
+
+      // mailto encoding
+      const href = `mailto:${encodeURIComponent(COMPANY_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      return href;
+    }
+
+    generateBtn.addEventListener("click", () => {
+      showFields();
+      const result = buildSummary();
+      summaryBox.textContent = result.text;
+
+      if (!result.ok) {
+        sendEmailBtn.style.pointerEvents = "none";
+        sendEmailBtn.style.opacity = ".55";
+        sendEmailBtn.setAttribute("href", "#");
+        return;
+      }
+
+      const href = makeMailto(result.text, result.data.name);
+      sendEmailBtn.setAttribute("href", href);
+      sendEmailBtn.style.pointerEvents = "auto";
+      sendEmailBtn.style.opacity = "1";
+    });
+
+    // Initialize field visibility
+    showFields();
+  </script>
+</body>
+</html>
